@@ -167,7 +167,7 @@ static inline void trace_kill_end() {}
 /* ro.lmk.direct_reclaim_threshold_ms property defaults */
 #define DEF_DIRECT_RECL_THRESH_MS 0
 /* ro.lmk.swap_compression_ratio property defaults */
-#define DEF_SWAP_COMP_RATIO 1
+#define DEF_SWAP_COMP_RATIO 2
 /* ro.lmk.lowmem_min_oom_score defaults */
 #define DEF_LOWMEM_MIN_SCORE (PREVIOUS_APP_ADJ + 1)
 
