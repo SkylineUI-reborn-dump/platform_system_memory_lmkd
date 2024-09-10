@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a39ac879_fdef26ec",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-09-10T17:15:17Z",
+      "side": 1,
+      "message": "`lmkd: count the number of times LMKD wakes up`\nwould be more readable title.",
+      "range": {
+        "startLine": 7,
+        "startChar": 6,
+        "endLine": 7,
+        "endChar": 50
+      },
+      "revId": "a29603ffd178d9398054a188b51ee6cb5713387b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9034e6a2_b634f5f7",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -14,6 +37,52 @@
       "writtenOn": "2024-09-10T16:13:48Z",
       "side": 1,
       "message": "Could we add the following line in this commit message:\n`Bug: 365748420`\n\nThis is for better tracking within buganizer.",
+      "revId": "a29603ffd178d9398054a188b51ee6cb5713387b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ebe1276_555fc6a0",
+        "filename": "lmkd.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-09-10T17:15:17Z",
+      "side": 1,
+      "message": "Please use `uint64_t`",
+      "range": {
+        "startLine": 248,
+        "startChar": 6,
+        "endLine": 248,
+        "endChar": 25
+      },
+      "revId": "a29603ffd178d9398054a188b51ee6cb5713387b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee7c424a_dcb00344",
+        "filename": "lmkd.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 3593,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-09-10T17:15:17Z",
+      "side": 1,
+      "message": "ALOGI(\"Wakeup counter is reset from %\" PRIu64 \" to 0\", mp_event_count);",
+      "range": {
+        "startLine": 3593,
+        "startChar": 11,
+        "endLine": 3593,
+        "endChar": 51
+      },
       "revId": "a29603ffd178d9398054a188b51ee6cb5713387b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
