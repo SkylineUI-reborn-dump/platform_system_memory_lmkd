@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9034e6a2_b634f5f7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1956645
+      },
+      "writtenOn": "2024-09-10T16:13:48Z",
+      "side": 1,
+      "message": "Could we add the following line in this commit message:\n`Bug: 365748420`\n\nThis is for better tracking within buganizer.",
+      "revId": "a29603ffd178d9398054a188b51ee6cb5713387b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
