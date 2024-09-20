@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "70145c0d_908a72b3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2036619
+      },
+      "writtenOn": "2024-09-20T02:36:58Z",
+      "side": 1,
+      "message": "Hi, Suren,\nI\u0027ve modified the patch according to your comments.\nPlease help to review, thank you.\n\nBest Regards,\nJohn Hsu",
+      "revId": "56d919cf74e3b35e59939ac18d05393aac7f0a94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
