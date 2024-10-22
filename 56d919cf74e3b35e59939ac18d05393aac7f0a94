@@ -63,6 +63,30 @@
       },
       "revId": "56d919cf74e3b35e59939ac18d05393aac7f0a94",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "375c5239_e681b2a4",
+        "filename": "lmkd.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 3593,
+      "author": {
+        "id": 2036619
+      },
+      "writtenOn": "2024-10-22T03:50:45Z",
+      "side": 1,
+      "message": "I also tried add this action when update_props, but the mp_event_count is not the expected value.",
+      "parentUuid": "15030d9b_568159c1",
+      "range": {
+        "startLine": 3593,
+        "startChar": 4,
+        "endLine": 3593,
+        "endChar": 73
+      },
+      "revId": "56d919cf74e3b35e59939ac18d05393aac7f0a94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
