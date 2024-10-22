@@ -73,6 +73,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b4e3fb57_f5417357",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2036619
+      },
+      "writtenOn": "2024-10-22T03:49:09Z",
+      "side": 1,
+      "message": "Hi Suren,\nThis patch can count the number of lmkd wake up when meet the memory pressure threshold instead of heavy-loading logging. To show the count, we can just re-init the lmkd, and it will print in the android logcat and reset the count to zero.",
+      "parentUuid": "1f42c06d_02c2a20f",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 47
+      },
+      "revId": "a29603ffd178d9398054a188b51ee6cb5713387b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9034e6a2_b634f5f7",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1

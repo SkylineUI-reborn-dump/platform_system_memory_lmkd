@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "871c600a_6f30a19e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2036619
+      },
+      "writtenOn": "2024-10-22T03:49:09Z",
+      "side": 1,
+      "message": "Hi Suren,\nI\u0027ve answered your questions and modified the commit message. Please help to review this patch, Thank you.\n\nBest Regards,\nJohn Hsu",
+      "revId": "85c34005ba9801db86a1eb60e94e88a740cbb8a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
