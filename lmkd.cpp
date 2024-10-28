@@ -211,6 +211,8 @@ static int mpevfd[VMPRESS_LEVEL_COUNT] = { -1, -1, -1 };
 static bool pidfd_supported;
 static int last_kill_pid_or_fd = -1;
 static struct timespec last_kill_tm;
+static struct timespec prev_trigger_tm;
+enum vmpressure_level prev_level = VMPRESS_LEVEL_LOW;
 static bool monitors_initialized;
 static bool boot_completed_handled = false;
 
@@ -2729,6 +2731,22 @@ static void mp_event_psi(int data, uint32_t events, struct polling_params *poll_
     if (clock_gettime(CLOCK_MONOTONIC_COARSE, &curr_tm) != 0) {
         ALOGE("Failed to get current time");
         return;
+    }
+
+    if (events > 0 ) {
+        /* If we get a lower event, ensure that it is a geniune event
+         * and not just a queued up event waiting to be handled.
+         */
+        long time_diff_ms = get_time_diff_ms(&prev_trigger_tm, &curr_tm);
+        if (level < prev_level && time_diff_ms < poll_params->polling_interval_ms) {
+            // event occured too soon. Continue with previous higher event.
+            ALOGD("Ignoring %s pressure event; occured too soon.",
+                       level_name[level]);
+            return;
+        }
+        prev_level = level;
+        prev_trigger_tm.tv_sec  = curr_tm.tv_sec;
+        prev_trigger_tm.tv_nsec = curr_tm.tv_nsec;
     }
 
     record_wakeup_time(&curr_tm, events ? Event : Polling, &wi);
