@@ -111,6 +111,30 @@
       },
       "revId": "56d919cf74e3b35e59939ac18d05393aac7f0a94",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "997765c1_ae4b0f30",
+        "filename": "lmkd.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 3593,
+      "author": {
+        "id": 2036619
+      },
+      "writtenOn": "2024-10-30T03:51:26Z",
+      "side": 1,
+      "message": "Hi Suren,\nI print the statistic in the init_monitors() because I just want to know this statistic the life-cycle of the monitor this time instead of using debug mode and spending such cost printing the ****heavy weight**** log when memory pressure event is triggered.",
+      "parentUuid": "83e31796_92c6380b",
+      "range": {
+        "startLine": 3593,
+        "startChar": 4,
+        "endLine": 3593,
+        "endChar": 73
+      },
+      "revId": "56d919cf74e3b35e59939ac18d05393aac7f0a94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
