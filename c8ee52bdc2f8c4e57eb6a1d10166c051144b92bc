@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64339b1a_72754c5b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-04T20:40:40Z",
+      "side": 1,
+      "message": "So, I think in this case we should always react to the highest level event (Critical in this case) instead of reporting the highest level during the next polling cycle. Otherwise it might be too late to react to a delayed Critical event.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 70
+      },
+      "revId": "c8ee52bdc2f8c4e57eb6a1d10166c051144b92bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26b5cf2a_723b7967",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-04T20:40:40Z",
+      "side": 1,
+      "message": "This problem should be solved in a separate patch. Please split this one into two patches.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "c8ee52bdc2f8c4e57eb6a1d10166c051144b92bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fb8689c_f73c42c7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-04T20:40:40Z",
+      "side": 1,
+      "message": "Ok, I think this makes sense.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 76
+      },
+      "revId": "c8ee52bdc2f8c4e57eb6a1d10166c051144b92bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60e29099_880f6d2d",
+        "filename": "lmkd.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 2741,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-04T20:40:40Z",
+      "side": 1,
+      "message": "I don\u0027t understand this condition. Why does this matter. Plus our current polling interval might be PSI_POLL_PERIOD_SHORT_MS. I think you want to skip if we are already polling a higher level event like this:\n```\nif (events) {\n    static enum vmpressure_level polling_level \u003d VMPRESS_LEVEL_LOW;\n\n    if (level \u003c polling_level \u0026\u0026 poll_params-\u003epoll_handler) {\n        ALOGD(\"Ignoring %s pressure event\", level_name[level]);\n        return;\n    }\n    polling_level \u003d level;    \n}\n```",
+      "range": {
+        "startLine": 2741,
+        "startChar": 34,
+        "endLine": 2741,
+        "endChar": 73
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "bc15ca95_4fe341a5",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "lmkd.cpp",
+              "range": {
+                "startLine": 2741,
+                "startChar": 0,
+                "endLine": 2742,
+                "endChar": 0
+              },
+              "replacement": "    if (level \u003c prev_level \u0026\u0026 time_diff_ms \u003c poll_params-\u003epolling_interval_ms) {\n"
+            },
+            {
+              "path": "lmkd.cpp",
+              "range": {
+                "startLine": 2746,
+                "startChar": 0,
+                "endLine": 2747,
+                "endChar": 0
+              },
+              "replacement": "    }\n"
+            }
+          ]
+        }
+      ],
+      "revId": "c8ee52bdc2f8c4e57eb6a1d10166c051144b92bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
