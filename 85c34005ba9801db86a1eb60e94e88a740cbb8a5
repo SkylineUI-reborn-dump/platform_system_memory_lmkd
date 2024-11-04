@@ -80,6 +80,52 @@
       "message": "Hi Suren,\nI\u0027ve replied your comment.\nPlease help to review the patch, thank you.\n\nBest Regards,\nJohn Hsu",
       "revId": "85c34005ba9801db86a1eb60e94e88a740cbb8a5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e33edb7f_05469ded",
+        "filename": "lmkd.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 2723,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-04T19:02:03Z",
+      "side": 1,
+      "message": "Let\u0027s add mp_event_count reporting here:\n```\nALOGI(\"%s memory pressure event #%\" PRIu64 \" is triggered\", level_name[level], mp_event_count);\n```",
+      "range": {
+        "startLine": 2723,
+        "startChar": 7,
+        "endLine": 2723,
+        "endChar": 74
+      },
+      "revId": "85c34005ba9801db86a1eb60e94e88a740cbb8a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fde64148_973a7b60",
+        "filename": "lmkd.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 3078,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-04T19:02:03Z",
+      "side": 1,
+      "message": "Let\u0027s add mp_event_count reporting here:\n```\nALOGI(\"%s memory pressure event #%\" PRIu64 \" is triggered\", level_name[level], mp_event_count);\n```",
+      "range": {
+        "startLine": 3078,
+        "startChar": 8,
+        "endLine": 3078,
+        "endChar": 74
+      },
+      "revId": "85c34005ba9801db86a1eb60e94e88a740cbb8a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

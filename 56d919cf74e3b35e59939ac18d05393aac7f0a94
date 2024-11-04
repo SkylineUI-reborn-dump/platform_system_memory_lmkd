@@ -135,6 +135,30 @@
       },
       "revId": "56d919cf74e3b35e59939ac18d05393aac7f0a94",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "481edc82_5a3bf442",
+        "filename": "lmkd.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 3593,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-04T19:02:03Z",
+      "side": 1,
+      "message": "Ok but let\u0027s add reporting of the event number in debug messages as well (see my earlier comments).",
+      "parentUuid": "997765c1_ae4b0f30",
+      "range": {
+        "startLine": 3593,
+        "startChar": 4,
+        "endLine": 3593,
+        "endChar": 73
+      },
+      "revId": "56d919cf74e3b35e59939ac18d05393aac7f0a94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
