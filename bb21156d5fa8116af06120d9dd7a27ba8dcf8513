@@ -64,6 +64,30 @@
       },
       "revId": "bb21156d5fa8116af06120d9dd7a27ba8dcf8513",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aeeedcb0_16c5ed63",
+        "filename": "lmkd.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 2751,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-05T17:50:33Z",
+      "side": 1,
+      "message": "Ok, have you tried my suggestion for the case you just described? I think it should work and prevent lower level event from overriding the higher level event if they happen within the same polling window. IOW, it should fix the problem you described.",
+      "parentUuid": "40af8980_19bad4f2",
+      "range": {
+        "startLine": 2736,
+        "startChar": 0,
+        "endLine": 2751,
+        "endChar": 0
+      },
+      "revId": "bb21156d5fa8116af06120d9dd7a27ba8dcf8513",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
