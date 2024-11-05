@@ -71,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ccc79a3_35f38b9a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1897375
+      },
+      "writtenOn": "2024-11-05T08:15:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "26b5cf2a_723b7967",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "c8ee52bdc2f8c4e57eb6a1d10166c051144b92bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4fb8689c_f73c42c7",
@@ -84,6 +108,30 @@
       "writtenOn": "2024-11-04T20:40:40Z",
       "side": 1,
       "message": "Ok, I think this makes sense.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 76
+      },
+      "revId": "c8ee52bdc2f8c4e57eb6a1d10166c051144b92bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e843de99_dc393620",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1897375
+      },
+      "writtenOn": "2024-11-05T08:15:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4fb8689c_f73c42c7",
       "range": {
         "startLine": 32,
         "startChar": 0,
@@ -141,6 +189,30 @@
           ]
         }
       ],
+      "revId": "c8ee52bdc2f8c4e57eb6a1d10166c051144b92bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b23bc74_43b00a96",
+        "filename": "lmkd.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 2741,
+      "author": {
+        "id": 1897375
+      },
+      "writtenOn": "2024-11-05T08:15:52Z",
+      "side": 1,
+      "message": "Updated the change to consider poll_params-\u003epolling_interval.\n\nRegarding \"I think you want to skip if we are already polling a higher level\"\nYes, But only if lower event occur sooner than one polling-window.\nIf a lower event occurs after one poll-window, it should reset the current higher event (being polled).\n\nConsider below cases where M1, M2 being Medium events and C1 is critical event, PSI Window beginning / end marked by \u0027|\u0027\n1. |---------C1M1------------|\nHere M1 came immediately after C1 before even one poll-window.\nThis M1 should be ignored.\n\n2. |---------M1------------C1--|------M2---------------------|\nPoll window would be\nIn above case, We\u0027d be polling for critical event (C1) when M2 is triggered.\nIn this case, M2 occurred only because previous window elapsed. \nSo, M2 is a new real medium event and previous polling for C1 should be replaced with polling for M2.",
+      "parentUuid": "60e29099_880f6d2d",
+      "range": {
+        "startLine": 2741,
+        "startChar": 34,
+        "endLine": 2741,
+        "endChar": 73
+      },
       "revId": "c8ee52bdc2f8c4e57eb6a1d10166c051144b92bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
