@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "373bee83_2309148e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1897375
+      },
+      "writtenOn": "2024-11-05T17:49:28Z",
+      "side": 1,
+      "message": "Adding kaleshsingh@google.com as well for second +2 from Google and P.V.Phani to approve from QC.",
+      "revId": "d155efb41b4eafb10b3c2940b4b4009b7e048a6a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
