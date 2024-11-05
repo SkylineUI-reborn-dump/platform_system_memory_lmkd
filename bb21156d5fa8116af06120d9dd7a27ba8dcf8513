@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96feef88_271b83b7",
+        "filename": "lmkd.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 2751,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-05T16:24:19Z",
+      "side": 1,
+      "message": "Ok, I see that you want to prevent override only during the first window. I think this simpler solution will result in the same behavior:\n```\nstatic void mp_event_psi(int data, uint32_t events, struct polling_params *poll_params) {\n    static enum vmpressure_level event_level \u003d VMPRESS_LEVEL_LOW;\n    ...\n\n    if (events) {\n        /* Ignore a lower event within the first polling window. */\n        if (level \u003c event_level) {\n            if (debug_process_killing)\n                ALOGI(\"Ignoring %s pressure event; occured too soon.\",\n                      level_name[level]);\n            return;\n        }\n        event_level \u003d level;\n    } else {\n        /* Reset event level after the first polling window. */    \n        event_level \u003d VMPRESS_LEVEL_LOW;\n    }   \n```",
+      "range": {
+        "startLine": 2736,
+        "startChar": 0,
+        "endLine": 2751,
+        "endChar": 0
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "5656adeb_0463bdef",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "lmkd.cpp",
+              "range": {
+                "startLine": 2744,
+                "startChar": 0,
+                "endLine": 2744,
+                "endChar": 0
+              },
+              "replacement": "                   level_name[level]);\n            return;\n        }\n        prev_level \u003d level;\n        prev_trigger_tm.tv_sec  \u003d curr_tm.tv_sec;\n        prev_trigger_tm.tv_nsec \u003d curr_tm.tv_nsec;\n    }\n\n    if (events \u003e 0 ) {\n        /* If we get a higher event, ensure that it is a geniune\n         * event and not just a queued up event waiting to be handled.\n         */\n            // event occured too soon. Continue with previous higher event.\n            ALOGD(\"Ignoring %s pressure event; occured too soon.\",\n"
+            }
+          ]
+        }
+      ],
+      "revId": "bb21156d5fa8116af06120d9dd7a27ba8dcf8513",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
