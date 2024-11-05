@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a75b3cf8_702636c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2036619
+      },
+      "writtenOn": "2024-11-05T08:11:17Z",
+      "side": 1,
+      "message": "Hi Suren,\nI\u0027ve add the mp_event_count to the mp_event_psi\u0027s and the mp_event_common\u0027s log. Please help to review this patch. Thank you.\n\nBest Regards,\nJohn Hsu",
+      "revId": "ff9f3d0770edb47883d9e57ed6ff6468f511fa48",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
