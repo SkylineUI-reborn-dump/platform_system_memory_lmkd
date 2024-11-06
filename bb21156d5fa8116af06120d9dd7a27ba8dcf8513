@@ -136,6 +136,30 @@
       },
       "revId": "bb21156d5fa8116af06120d9dd7a27ba8dcf8513",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0236ca7_0506c518",
+        "filename": "lmkd.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 2751,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-06T17:21:53Z",
+      "side": 1,
+      "message": "Have you tried exactly the version I posted? Posting it here again for reference:\n```\nstatic void mp_event_psi(int data, uint32_t events, struct polling_params *poll_params) {\n    static enum vmpressure_level event_level \u003d VMPRESS_LEVEL_LOW;\n    ...\n\n    if (events) {\n        /* Ignore a lower event within the first polling window. */\n        if (level \u003c event_level) {\n            if (debug_process_killing)\n                ALOGI(\"Ignoring %s pressure event; occured too soon.\",\n                      level_name[level]);\n            return;\n        }\n        event_level \u003d level;\n    } else {\n        /* Reset event level after the first polling window. */    \n        event_level \u003d VMPRESS_LEVEL_LOW;\n    }   \n```\nDid it cause some issues and you had to change to the version you posted?\n\nIn your version you are resetting polling_level after every new event. That is wrong and that\u0027s why your lower level event overrides the higher level one. Please either try the version I posted or if it causes some issues please explain them to me.",
+      "parentUuid": "26b1f41c_a50ef3c8",
+      "range": {
+        "startLine": 2736,
+        "startChar": 0,
+        "endLine": 2751,
+        "endChar": 0
+      },
+      "revId": "bb21156d5fa8116af06120d9dd7a27ba8dcf8513",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
