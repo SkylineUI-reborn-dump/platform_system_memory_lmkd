@@ -112,6 +112,30 @@
       },
       "revId": "bb21156d5fa8116af06120d9dd7a27ba8dcf8513",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26b1f41c_a50ef3c8",
+        "filename": "lmkd.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 2751,
+      "author": {
+        "id": 1897375
+      },
+      "writtenOn": "2024-11-06T08:47:36Z",
+      "side": 1,
+      "message": "I tried your below change with both partial_stall_ms and complete_stall_ms set to same value\n\n      if (events) {\n       static enum vmpressure_level polling_level \u003d VMPRESS_LEVEL_LOW;\n    \n        if (level \u003c polling_level \u0026\u0026 poll_params-\u003epoll_handler) {\n            ALOGD(\"Ignoring %s pressure event\", level_name[level]);\n            return;\n        }\n        polling_level \u003d level;    \n    }\n\nIt works for most of the cases.\nBut, when the triggered critical event makes a kill decision, we pause polling and set poll_hanlder to NULL.\n\nIf a medium event is triggerred immediately, it assumes that there is no polling and continues with medium event.\n\n\u003e11-06 07:24:16.633 31867 31867 D lowmemorykiller: medium pressure event polling check\n\u003e11-06 07:24:16.727 31867 31867 D lowmemorykiller: critical pressure event triggered\n\u003e11-06 07:24:16.728 31867 31867 I lowmemorykiller: Kill google chrome \u003ctruncated\u003e\n\u003e11-06 07:24:16.728 31867 31867 D lowmemorykiller: medium pressure event triggered\n\u003e11-06 07:24:16.750 31867 31869 I lowmemorykiller: Process 7991 was reaped in 20ms\n\u003e11-06 07:24:16.758 31867 31867 I lowmemorykiller: Process got killed in 28ms\n\u003e11-06 07:24:16.758 31867 31867 D lowmemorykiller: medium pressure event polling check\n\u003e11-06 07:24:16.857 31867 31867 D lowmemorykiller: medium pressure event polling check",
+      "parentUuid": "5022d253_da0bde23",
+      "range": {
+        "startLine": 2736,
+        "startChar": 0,
+        "endLine": 2751,
+        "endChar": 0
+      },
+      "revId": "bb21156d5fa8116af06120d9dd7a27ba8dcf8513",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
