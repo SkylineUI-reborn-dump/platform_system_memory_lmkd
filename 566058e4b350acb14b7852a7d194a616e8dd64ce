@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0cbc6cdd_68fa89b0",
+        "filename": "lmkd.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 2739,
+      "author": {
+        "id": 1157738
+      },
+      "writtenOn": "2024-11-06T18:05:29Z",
+      "side": 1,
+      "message": "Please fix this ERROR reported by Common Typos: Common typo found: \"occured\" -- should it be \"occurred\"?\n\nAnalyzer Description: Linter for catching common typos motivated by go/todo-fail and go/lol-codesearch. Shared with google3 common typos library go/common-typos.\nOwner: ayeaye-team@google.com\n\nCommon typo found: \"occured\" -- should it be \"occurred\"?\nNote: a line containing \"common_typos_disable\" or \"common_typos_enable\" will turn off or on (respectively) the linter for subsequent lines in the file. Alternatively include the token \"NOTYPO\" within a line to skip typo linting that line or include \u0027No-Typo-Check: \u003creason\u003e\u0027in the commit message.",
+      "range": {
+        "startLine": 2739,
+        "startChar": 51,
+        "endLine": 2739,
+        "endChar": 58
+      },
+      "revId": "566058e4b350acb14b7852a7d194a616e8dd64ce",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
