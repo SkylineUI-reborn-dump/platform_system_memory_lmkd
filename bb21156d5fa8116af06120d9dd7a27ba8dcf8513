@@ -160,6 +160,30 @@
       },
       "revId": "bb21156d5fa8116af06120d9dd7a27ba8dcf8513",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9a7620a_7f06aa29",
+        "filename": "lmkd.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 2751,
+      "author": {
+        "id": 1897375
+      },
+      "writtenOn": "2024-11-06T18:04:34Z",
+      "side": 1,
+      "message": "My apologies, I missed your second version of the suggestion.\nI tested it now and seems to work as expected.\nUpdated the patch with this suggestion.",
+      "parentUuid": "b0236ca7_0506c518",
+      "range": {
+        "startLine": 2736,
+        "startChar": 0,
+        "endLine": 2751,
+        "endChar": 0
+      },
+      "revId": "bb21156d5fa8116af06120d9dd7a27ba8dcf8513",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
