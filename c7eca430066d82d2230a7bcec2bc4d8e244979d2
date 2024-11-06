@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5312b15_c0829697",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1897375
+      },
+      "writtenOn": "2024-11-06T18:10:22Z",
+      "side": 1,
+      "message": "Adding PV Phani for approval from QC.",
+      "revId": "c7eca430066d82d2230a7bcec2bc4d8e244979d2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
