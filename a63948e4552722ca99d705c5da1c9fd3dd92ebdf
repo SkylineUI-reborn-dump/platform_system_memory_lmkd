@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7b502be_82f9d0f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2036619
+      },
+      "writtenOn": "2024-11-15T02:15:06Z",
+      "side": 1,
+      "message": "Hi Suren,\nI\u0027ve modified for the line rule and the wrong text. And this patch also passed the test. Please help to review this patch.\n\nBest Regards,\nJohn Hsu",
+      "revId": "a63948e4552722ca99d705c5da1c9fd3dd92ebdf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
